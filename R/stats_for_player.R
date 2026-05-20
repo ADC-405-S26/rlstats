@@ -7,6 +7,7 @@
 #' @returns Some aggregate statistics for the specified player
 #' @importFrom dplyr filter summarize n
 #' @importFrom rlang .data
+#' @importFrom gt gt tab_header fmt_number fmt_percent
 #' @export
 #'
 #' @examples
@@ -19,17 +20,23 @@ stats_for_player <- function(df,name,game = NULL)
   checkmate::assert_string(name)
   checkmate::assert_string(game, null.ok = TRUE)
 
-  p <- if(is.null(game)){
+  s <- if(is.null(game)){
     df |>  filter(.data$player_name == name)
   } else{
     df |>  filter(.data$player_name == name, .data$match_guid == game)
   }
 
-  p |>   summarize(Number_of_Ball_Touches = sum(.data$touches),
+  stats <- s |>   summarize(Number_of_Ball_Touches = sum(.data$touches),
       Number_Of_Goals = sum(.data$goals),
       Number_Of_Saves = sum(.data$saves),
       Average_Speed = mean(.data$speed, na.rm = TRUE),
       Average_Boost = mean(.data$boost, na.rm = TRUE),
       Percentage_Of_Time_Supersonic = sum(.data$is_supersonic == 'True')/n())
+
+  stats |> gt() |>
+    tab_header(title = paste("Stats for", name)) |>
+    fmt_number(columns = c('Average_Speed', 'Average_Boost'), decimals = 2) |>
+    fmt_percent(columns = 'Percentage_Of_Time_Supersonic', decimals = 1)
+
   }
 
