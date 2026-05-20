@@ -1,0 +1,17 @@
+Package: rlstats
+Title: Some Functions For Analyzing Personal Rocket League Gameplay Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Tristan", "Zook", , "tristanzook@gmail.com", role = c("aut", "cre"))
+Description: Provides some convenient functions for analyzing personal rocket league gameplay data. Allows analyzing performance by specific player, or across teams. Includes aggregation and visualization.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    checkmate,
+    dplyr,
+    rlang
