@@ -26,9 +26,9 @@ stats_for_player <- function(df,name,game = NULL)
     df |>  filter(.data$player_name == name, .data$match_guid == game)
   }
 
-  stats <- s |>   summarize(Number_of_Ball_Touches = sum(.data$touches),
-      Number_Of_Goals = sum(.data$goals),
-      Number_Of_Saves = sum(.data$saves),
+  stats <- s |>   summarize(Number_of_Ball_Touches = max(.data$touches),
+      Number_Of_Goals = max(.data$goals),
+      Number_Of_Saves = max(.data$saves),
       Average_Speed = mean(.data$speed, na.rm = TRUE),
       Average_Boost = mean(.data$boost, na.rm = TRUE),
       Percentage_Of_Time_Supersonic = sum(.data$is_supersonic == 'True')/n())
