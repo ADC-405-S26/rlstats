@@ -11,9 +11,9 @@
 #' @export
 #'
 #' @examples
-#' stats_for_player(rocket_data, name = "TDMZ223")
+#' stats_for_player(TDMZ443games, name = "TDMZ443")
 #'
-#' stats_for_player(rocket_data, name = "TDMZ223", "C34377FE11F153C39C443797FB07660C")
+#' stats_for_player(TDMZ443games, name = "TDMZ443", "D96D303C11F15617E1F59A8137901B26")
 stats_for_player <- function(df,name,game = NULL)
 {
   checkmate::assert_data_frame(df)
@@ -21,17 +21,17 @@ stats_for_player <- function(df,name,game = NULL)
   checkmate::assert_string(game, null.ok = TRUE)
 
   s <- if(is.null(game)){
-    df |>  filter(.data$player_name == name)
+    df |>  filter(.data$Name == name)
   } else{
-    df |>  filter(.data$player_name == name, .data$match_guid == game)
+    df |>  filter(.data$Name == name, .data$MatchGuid == game)
   }
 
-  stats <- s |>   summarize(Number_of_Ball_Touches = max(.data$touches),
-      Number_Of_Goals = max(.data$goals),
-      Number_Of_Saves = max(.data$saves),
-      Average_Speed = mean(.data$speed, na.rm = TRUE),
-      Average_Boost = mean(.data$boost, na.rm = TRUE),
-      Percentage_Of_Time_Supersonic = sum(.data$is_supersonic == 'True')/n())
+  stats <- s |>   summarize(Number_of_Ball_Touches = max(.data$Touches),
+      Number_Of_Goals = max(.data$Goals),
+      Number_Of_Saves = max(.data$Saves),
+      Average_Speed = mean(.data$Speed, na.rm = TRUE),
+      Average_Boost = mean(.data$Boost, na.rm = TRUE),
+      Percentage_Of_Time_Supersonic = sum(.data$bSupersonic == 'True')/n())
 
   stats |> gt() |>
     tab_header(title = paste("Stats for", name)) |>

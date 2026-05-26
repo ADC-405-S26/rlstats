@@ -20,5 +20,5 @@ Two line plots. One depicting a player's speed over the course of a  specified g
 Line plots showing a players boost and speed for a game
 }
 \examples{
-speed_boost_plots(rocket_data, name = "TDMZ223", "C34377FE11F153C39C443797FB07660C")
+speed_boost_plots(TDMZ443games, name = "TDMZ443", "D96D303C11F15617E1F59A8137901B26")
 }

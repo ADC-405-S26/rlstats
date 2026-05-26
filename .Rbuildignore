@@ -7,3 +7,5 @@
 ^rlstats\.Rcheck$
 ^rlstats.*\.tar\.gz$
 ^rlstats.*\.tgz$
+^README\.Rmd$
+^rlstats\.Rproj$

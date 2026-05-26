@@ -11,7 +11,7 @@
 #' @export
 #'
 #' @examples
-#'speed_boost_plots(rocket_data, name = "TDMZ223", "C34377FE11F153C39C443797FB07660C")
+#'speed_boost_plots(TDMZ443games, name = "TDMZ443", "D96D303C11F15617E1F59A8137901B26")
 speed_boost_plots <- function(df, name, game) {
 
   checkmate::assert_data_frame(df)
@@ -19,12 +19,12 @@ speed_boost_plots <- function(df, name, game) {
   checkmate::assert_string(game)
 
   player_df <- df |>
-    filter(.data$player_name == name, .data$match_guid == game) |>
+    filter(.data$Name == name, .data$MatchGuid == game) |>
     mutate(time_seconds = row_number() / 7,
            time_bucket = floor(.data$time_seconds / 15) * 15) |>
     group_by(.data$time_bucket) |>
-    summarize(avg_speed = mean(.data$speed, na.rm = TRUE),
-              avg_boost = mean(.data$boost, na.rm = TRUE))
+    summarize(avg_speed = mean(.data$Speed, na.rm = TRUE),
+              avg_boost = mean(.data$Boost, na.rm = TRUE))
 
   speed_plot <- ggplot(player_df, aes(x = .data$time_bucket, y = .data$avg_speed)) +
     geom_line(color = "steelblue") +

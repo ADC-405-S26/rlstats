@@ -10,25 +10,37 @@
 #' @export
 #'
 #' @examples
-#' compare_teams(rocket_data, game = "C34377FE11F153C39C443797FB07660C")
+#' compare_teams(TDMZ443games, game = "D96D303C11F15617E1F59A8137901B26")
 compare_teams <- function(df,game)
 {
   checkmate::assert_data_frame(df)
   checkmate::assert_string(game)
 
 
-    df |>  filter(.data$match_guid == game) |>
-           group_by(.data$team_num) |>
-           summarize(Number_of_Ball_Touches = max(.data$touches),
-                      Number_Of_Goals = max(.data$goals),
-                      Number_Of_Saves = max(.data$saves),
-                      Average_Speed = mean(.data$speed, na.rm = TRUE),
-                      Average_Boost = mean(.data$boost, na.rm = TRUE),
-                      Percentage_Of_Time_Supersonic =
-                            sum(.data$is_supersonic == 'True')/n()) |>
+  df |>
+    filter(.data$MatchGuid == game) |>
+    group_by(.data$TeamNum, .data$Name) |>
+    summarize(
+      goals = max(.data$Goals),
+      touches = max(.data$Touches),
+      shots = max(.data$Shots),
+      saves = max(.data$Saves),
+      assists = max(.data$Assists),
+      car_touches = max(.data$CarTouches),
+      demos = max(.data$Demos),
+      .groups = "drop"
+    ) |>
+    group_by(.data$TeamNum) |>
+    summarize(
+      Number_Of_Goals = sum(.data$goals),
+      Number_of_Ball_Touches = sum(.data$touches),
+      Number_Of_Shots = sum(.data$shots),
+      Number_Of_Saves = sum(.data$saves),
+      Number_Of_Assists =  sum(.data$assists),
+      Number_Of_Car_Touches = sum(.data$car_touches),
+      Number_Of_Demos = sum(.data$demos)
+    ) |>
     gt() |>
-    tab_header(title = paste("Stats for teams")) |>
-    fmt_number(columns = c('Average_Speed', 'Average_Boost'), decimals = 2) |>
-    fmt_percent(columns = 'Percentage_Of_Time_Supersonic', decimals = 1)
+    tab_header(title = paste("Stats for teams"))
 
 }

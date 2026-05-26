@@ -18,5 +18,5 @@ A table with statistics comparing the teams partaking in a game
 A table with some statistics comparing two teams in a game
 }
 \examples{
-compare_teams(rocket_data, game = "C34377FE11F153C39C443797FB07660C")
+compare_teams(TDMZ443games, game = "D96D303C11F15617E1F59A8137901B26")
 }
