@@ -40,7 +40,9 @@ This package contains three main functions. Two for analyzing a specific player,
 library(rlstats)
 ```
 
-####stats_for_player
+
+
+#### stats_for_player
 
 This function outputs a table with some basic summary statistics for a specified player
 
@@ -54,7 +56,9 @@ If your dataset contains data from several games, the above function call will r
 stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA271D83282')
 ```
 
-####speed_boost_plots
+
+
+#### speed_boost_plots
 
 This function returns two plots displaying boost total and speed information for a specified player throughout the course of a specified game
 
@@ -62,10 +66,13 @@ This function returns two plots displaying boost total and speed information for
 speed_boost_plots(TDMZ443games, name = 'TDMZ443', game = '8DF7C4C211F1560E0ED84EA271D83282')
 ```
 
-####compare_teams
+
+
+#### compare_teams
 
 This functions outputs a table with some summary statistics allowing comparison between the performance of both teams in specified match
 
 ```{r}
+#|eval: true
 compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
 ```

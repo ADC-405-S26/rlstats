@@ -41,7 +41,7 @@ see usage of all three.
 library(rlstats)
 ```
 
-\####stats_for_player
+#### stats_for_player
 
 This function outputs a table with some basic summary statistics for a
 specified player
@@ -50,20 +50,20 @@ specified player
 stats_for_player(TDMZ443games, name = "TDMZ443")
 ```
 
-<div id="xsrrwvasdo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xsrrwvasdo table {
+<div id="fyuqdzaaon" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fyuqdzaaon table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#xsrrwvasdo thead, #xsrrwvasdo tbody, #xsrrwvasdo tfoot, #xsrrwvasdo tr, #xsrrwvasdo td, #xsrrwvasdo th {
+&#10;#fyuqdzaaon thead, #fyuqdzaaon tbody, #fyuqdzaaon tfoot, #fyuqdzaaon tr, #fyuqdzaaon td, #fyuqdzaaon th {
   border-style: none;
 }
-&#10;#xsrrwvasdo p {
+&#10;#fyuqdzaaon p {
   margin: 0;
   padding: 0;
 }
-&#10;#xsrrwvasdo .gt_table {
+&#10;#fyuqdzaaon .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -88,11 +88,11 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_caption {
+&#10;#fyuqdzaaon .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#xsrrwvasdo .gt_title {
+&#10;#fyuqdzaaon .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -103,7 +103,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#xsrrwvasdo .gt_subtitle {
+&#10;#fyuqdzaaon .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -114,7 +114,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#xsrrwvasdo .gt_heading {
+&#10;#fyuqdzaaon .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -125,12 +125,12 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_bottom_border {
+&#10;#fyuqdzaaon .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_col_headings {
+&#10;#fyuqdzaaon .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -144,7 +144,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_col_heading {
+&#10;#fyuqdzaaon .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -163,7 +163,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#xsrrwvasdo .gt_column_spanner_outer {
+&#10;#fyuqdzaaon .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -174,13 +174,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#xsrrwvasdo .gt_column_spanner_outer:first-child {
+&#10;#fyuqdzaaon .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#xsrrwvasdo .gt_column_spanner_outer:last-child {
+&#10;#fyuqdzaaon .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#xsrrwvasdo .gt_column_spanner {
+&#10;#fyuqdzaaon .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -191,10 +191,10 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   display: inline-block;
   width: 100%;
 }
-&#10;#xsrrwvasdo .gt_spanner_row {
+&#10;#fyuqdzaaon .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#xsrrwvasdo .gt_group_heading {
+&#10;#fyuqdzaaon .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -219,7 +219,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   vertical-align: middle;
   text-align: left;
 }
-&#10;#xsrrwvasdo .gt_empty_group_heading {
+&#10;#fyuqdzaaon .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -233,13 +233,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#xsrrwvasdo .gt_from_md > :first-child {
+&#10;#fyuqdzaaon .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#xsrrwvasdo .gt_from_md > :last-child {
+&#10;#fyuqdzaaon .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#xsrrwvasdo .gt_row {
+&#10;#fyuqdzaaon .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -257,7 +257,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#xsrrwvasdo .gt_stub {
+&#10;#fyuqdzaaon .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -269,7 +269,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#xsrrwvasdo .gt_stub_row_group {
+&#10;#fyuqdzaaon .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -282,13 +282,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#xsrrwvasdo .gt_row_group_first td {
+&#10;#fyuqdzaaon .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#xsrrwvasdo .gt_row_group_first th {
+&#10;#fyuqdzaaon .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#xsrrwvasdo .gt_summary_row {
+&#10;#fyuqdzaaon .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -297,14 +297,14 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#xsrrwvasdo .gt_first_summary_row {
+&#10;#fyuqdzaaon .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_first_summary_row.thick {
+&#10;#fyuqdzaaon .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#xsrrwvasdo .gt_last_summary_row {
+&#10;#fyuqdzaaon .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -313,7 +313,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_grand_summary_row {
+&#10;#fyuqdzaaon .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -322,7 +322,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#xsrrwvasdo .gt_first_grand_summary_row {
+&#10;#fyuqdzaaon .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -331,7 +331,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_last_grand_summary_row_top {
+&#10;#fyuqdzaaon .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -340,10 +340,10 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_striped {
+&#10;#fyuqdzaaon .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#xsrrwvasdo .gt_table_body {
+&#10;#fyuqdzaaon .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -351,7 +351,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_footnotes {
+&#10;#fyuqdzaaon .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -364,7 +364,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_footnote {
+&#10;#fyuqdzaaon .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -372,7 +372,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#xsrrwvasdo .gt_sourcenotes {
+&#10;#fyuqdzaaon .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -385,64 +385,64 @@ stats_for_player(TDMZ443games, name = "TDMZ443")
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#xsrrwvasdo .gt_sourcenote {
+&#10;#fyuqdzaaon .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#xsrrwvasdo .gt_left {
+&#10;#fyuqdzaaon .gt_left {
   text-align: left;
 }
-&#10;#xsrrwvasdo .gt_center {
+&#10;#fyuqdzaaon .gt_center {
   text-align: center;
 }
-&#10;#xsrrwvasdo .gt_right {
+&#10;#fyuqdzaaon .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#xsrrwvasdo .gt_font_normal {
+&#10;#fyuqdzaaon .gt_font_normal {
   font-weight: normal;
 }
-&#10;#xsrrwvasdo .gt_font_bold {
+&#10;#fyuqdzaaon .gt_font_bold {
   font-weight: bold;
 }
-&#10;#xsrrwvasdo .gt_font_italic {
+&#10;#fyuqdzaaon .gt_font_italic {
   font-style: italic;
 }
-&#10;#xsrrwvasdo .gt_super {
+&#10;#fyuqdzaaon .gt_super {
   font-size: 65%;
 }
-&#10;#xsrrwvasdo .gt_footnote_marks {
+&#10;#fyuqdzaaon .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#xsrrwvasdo .gt_asterisk {
+&#10;#fyuqdzaaon .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#xsrrwvasdo .gt_indent_1 {
+&#10;#fyuqdzaaon .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#xsrrwvasdo .gt_indent_2 {
+&#10;#fyuqdzaaon .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#xsrrwvasdo .gt_indent_3 {
+&#10;#fyuqdzaaon .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#xsrrwvasdo .gt_indent_4 {
+&#10;#fyuqdzaaon .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#xsrrwvasdo .gt_indent_5 {
+&#10;#fyuqdzaaon .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#xsrrwvasdo .katex-display {
+&#10;#fyuqdzaaon .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#xsrrwvasdo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#fyuqdzaaon div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -479,20 +479,20 @@ to specify a particular game, you pass in its match guid.
 stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA271D83282')
 ```
 
-<div id="lcngcjemox" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lcngcjemox table {
+<div id="tebkdtzthy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tebkdtzthy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#lcngcjemox thead, #lcngcjemox tbody, #lcngcjemox tfoot, #lcngcjemox tr, #lcngcjemox td, #lcngcjemox th {
+&#10;#tebkdtzthy thead, #tebkdtzthy tbody, #tebkdtzthy tfoot, #tebkdtzthy tr, #tebkdtzthy td, #tebkdtzthy th {
   border-style: none;
 }
-&#10;#lcngcjemox p {
+&#10;#tebkdtzthy p {
   margin: 0;
   padding: 0;
 }
-&#10;#lcngcjemox .gt_table {
+&#10;#tebkdtzthy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -517,11 +517,11 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_caption {
+&#10;#tebkdtzthy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#lcngcjemox .gt_title {
+&#10;#tebkdtzthy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -532,7 +532,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#lcngcjemox .gt_subtitle {
+&#10;#tebkdtzthy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -543,7 +543,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#lcngcjemox .gt_heading {
+&#10;#tebkdtzthy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -554,12 +554,12 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_bottom_border {
+&#10;#tebkdtzthy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_col_headings {
+&#10;#tebkdtzthy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -573,7 +573,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_col_heading {
+&#10;#tebkdtzthy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -592,7 +592,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#lcngcjemox .gt_column_spanner_outer {
+&#10;#tebkdtzthy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -603,13 +603,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#lcngcjemox .gt_column_spanner_outer:first-child {
+&#10;#tebkdtzthy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#lcngcjemox .gt_column_spanner_outer:last-child {
+&#10;#tebkdtzthy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#lcngcjemox .gt_column_spanner {
+&#10;#tebkdtzthy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -620,10 +620,10 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   display: inline-block;
   width: 100%;
 }
-&#10;#lcngcjemox .gt_spanner_row {
+&#10;#tebkdtzthy .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#lcngcjemox .gt_group_heading {
+&#10;#tebkdtzthy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -648,7 +648,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   vertical-align: middle;
   text-align: left;
 }
-&#10;#lcngcjemox .gt_empty_group_heading {
+&#10;#tebkdtzthy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -662,13 +662,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#lcngcjemox .gt_from_md > :first-child {
+&#10;#tebkdtzthy .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#lcngcjemox .gt_from_md > :last-child {
+&#10;#tebkdtzthy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#lcngcjemox .gt_row {
+&#10;#tebkdtzthy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -686,7 +686,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#lcngcjemox .gt_stub {
+&#10;#tebkdtzthy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -698,7 +698,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#lcngcjemox .gt_stub_row_group {
+&#10;#tebkdtzthy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -711,13 +711,13 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#lcngcjemox .gt_row_group_first td {
+&#10;#tebkdtzthy .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#lcngcjemox .gt_row_group_first th {
+&#10;#tebkdtzthy .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#lcngcjemox .gt_summary_row {
+&#10;#tebkdtzthy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -726,14 +726,14 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#lcngcjemox .gt_first_summary_row {
+&#10;#tebkdtzthy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_first_summary_row.thick {
+&#10;#tebkdtzthy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#lcngcjemox .gt_last_summary_row {
+&#10;#tebkdtzthy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,7 +742,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_grand_summary_row {
+&#10;#tebkdtzthy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -751,7 +751,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#lcngcjemox .gt_first_grand_summary_row {
+&#10;#tebkdtzthy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -760,7 +760,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_last_grand_summary_row_top {
+&#10;#tebkdtzthy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -769,10 +769,10 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_striped {
+&#10;#tebkdtzthy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#lcngcjemox .gt_table_body {
+&#10;#tebkdtzthy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -780,7 +780,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_footnotes {
+&#10;#tebkdtzthy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -793,7 +793,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_footnote {
+&#10;#tebkdtzthy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -801,7 +801,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#lcngcjemox .gt_sourcenotes {
+&#10;#tebkdtzthy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -814,64 +814,64 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#lcngcjemox .gt_sourcenote {
+&#10;#tebkdtzthy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#lcngcjemox .gt_left {
+&#10;#tebkdtzthy .gt_left {
   text-align: left;
 }
-&#10;#lcngcjemox .gt_center {
+&#10;#tebkdtzthy .gt_center {
   text-align: center;
 }
-&#10;#lcngcjemox .gt_right {
+&#10;#tebkdtzthy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#lcngcjemox .gt_font_normal {
+&#10;#tebkdtzthy .gt_font_normal {
   font-weight: normal;
 }
-&#10;#lcngcjemox .gt_font_bold {
+&#10;#tebkdtzthy .gt_font_bold {
   font-weight: bold;
 }
-&#10;#lcngcjemox .gt_font_italic {
+&#10;#tebkdtzthy .gt_font_italic {
   font-style: italic;
 }
-&#10;#lcngcjemox .gt_super {
+&#10;#tebkdtzthy .gt_super {
   font-size: 65%;
 }
-&#10;#lcngcjemox .gt_footnote_marks {
+&#10;#tebkdtzthy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#lcngcjemox .gt_asterisk {
+&#10;#tebkdtzthy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#lcngcjemox .gt_indent_1 {
+&#10;#tebkdtzthy .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#lcngcjemox .gt_indent_2 {
+&#10;#tebkdtzthy .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#lcngcjemox .gt_indent_3 {
+&#10;#tebkdtzthy .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#lcngcjemox .gt_indent_4 {
+&#10;#tebkdtzthy .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#lcngcjemox .gt_indent_5 {
+&#10;#tebkdtzthy .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#lcngcjemox .katex-display {
+&#10;#tebkdtzthy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#lcngcjemox div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#tebkdtzthy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -900,7 +900,7 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
   &#10;</table>
 </div>
 
-\####speed_boost_plots
+#### speed_boost_plots
 
 This function returns two plots displaying boost total and speed
 information for a specified player throughout the course of a specified
@@ -912,29 +912,30 @@ speed_boost_plots(TDMZ443games, name = 'TDMZ443', game = '8DF7C4C211F1560E0ED84E
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" alt="" width="100%" />
 
-\####compare_teams
+#### compare_teams
 
 This functions outputs a table with some summary statistics allowing
 comparison between the performance of both teams in specified match
 
 ``` r
+#|eval: true
 compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
 ```
 
-<div id="kytyfzjkiw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kytyfzjkiw table {
+<div id="ivqoljkdcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ivqoljkdcy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#kytyfzjkiw thead, #kytyfzjkiw tbody, #kytyfzjkiw tfoot, #kytyfzjkiw tr, #kytyfzjkiw td, #kytyfzjkiw th {
+&#10;#ivqoljkdcy thead, #ivqoljkdcy tbody, #ivqoljkdcy tfoot, #ivqoljkdcy tr, #ivqoljkdcy td, #ivqoljkdcy th {
   border-style: none;
 }
-&#10;#kytyfzjkiw p {
+&#10;#ivqoljkdcy p {
   margin: 0;
   padding: 0;
 }
-&#10;#kytyfzjkiw .gt_table {
+&#10;#ivqoljkdcy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -959,11 +960,11 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_caption {
+&#10;#ivqoljkdcy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#kytyfzjkiw .gt_title {
+&#10;#ivqoljkdcy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -974,7 +975,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#kytyfzjkiw .gt_subtitle {
+&#10;#ivqoljkdcy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -985,7 +986,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#kytyfzjkiw .gt_heading {
+&#10;#ivqoljkdcy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -996,12 +997,12 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_bottom_border {
+&#10;#ivqoljkdcy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_col_headings {
+&#10;#ivqoljkdcy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1015,7 +1016,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_col_heading {
+&#10;#ivqoljkdcy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1034,7 +1035,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#kytyfzjkiw .gt_column_spanner_outer {
+&#10;#ivqoljkdcy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1045,13 +1046,13 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#kytyfzjkiw .gt_column_spanner_outer:first-child {
+&#10;#ivqoljkdcy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#kytyfzjkiw .gt_column_spanner_outer:last-child {
+&#10;#ivqoljkdcy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#kytyfzjkiw .gt_column_spanner {
+&#10;#ivqoljkdcy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1062,10 +1063,10 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   display: inline-block;
   width: 100%;
 }
-&#10;#kytyfzjkiw .gt_spanner_row {
+&#10;#ivqoljkdcy .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#kytyfzjkiw .gt_group_heading {
+&#10;#ivqoljkdcy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1090,7 +1091,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   vertical-align: middle;
   text-align: left;
 }
-&#10;#kytyfzjkiw .gt_empty_group_heading {
+&#10;#ivqoljkdcy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1104,13 +1105,13 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#kytyfzjkiw .gt_from_md > :first-child {
+&#10;#ivqoljkdcy .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#kytyfzjkiw .gt_from_md > :last-child {
+&#10;#ivqoljkdcy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#kytyfzjkiw .gt_row {
+&#10;#ivqoljkdcy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1128,7 +1129,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#kytyfzjkiw .gt_stub {
+&#10;#ivqoljkdcy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1140,7 +1141,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#kytyfzjkiw .gt_stub_row_group {
+&#10;#ivqoljkdcy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1153,13 +1154,13 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#kytyfzjkiw .gt_row_group_first td {
+&#10;#ivqoljkdcy .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#kytyfzjkiw .gt_row_group_first th {
+&#10;#ivqoljkdcy .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#kytyfzjkiw .gt_summary_row {
+&#10;#ivqoljkdcy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1168,14 +1169,14 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#kytyfzjkiw .gt_first_summary_row {
+&#10;#ivqoljkdcy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_first_summary_row.thick {
+&#10;#ivqoljkdcy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#kytyfzjkiw .gt_last_summary_row {
+&#10;#ivqoljkdcy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1184,7 +1185,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_grand_summary_row {
+&#10;#ivqoljkdcy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1193,7 +1194,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#kytyfzjkiw .gt_first_grand_summary_row {
+&#10;#ivqoljkdcy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1202,7 +1203,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_last_grand_summary_row_top {
+&#10;#ivqoljkdcy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1211,10 +1212,10 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_striped {
+&#10;#ivqoljkdcy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#kytyfzjkiw .gt_table_body {
+&#10;#ivqoljkdcy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1222,7 +1223,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_footnotes {
+&#10;#ivqoljkdcy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1235,7 +1236,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_footnote {
+&#10;#ivqoljkdcy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1243,7 +1244,7 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#kytyfzjkiw .gt_sourcenotes {
+&#10;#ivqoljkdcy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1256,64 +1257,64 @@ compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#kytyfzjkiw .gt_sourcenote {
+&#10;#ivqoljkdcy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#kytyfzjkiw .gt_left {
+&#10;#ivqoljkdcy .gt_left {
   text-align: left;
 }
-&#10;#kytyfzjkiw .gt_center {
+&#10;#ivqoljkdcy .gt_center {
   text-align: center;
 }
-&#10;#kytyfzjkiw .gt_right {
+&#10;#ivqoljkdcy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#kytyfzjkiw .gt_font_normal {
+&#10;#ivqoljkdcy .gt_font_normal {
   font-weight: normal;
 }
-&#10;#kytyfzjkiw .gt_font_bold {
+&#10;#ivqoljkdcy .gt_font_bold {
   font-weight: bold;
 }
-&#10;#kytyfzjkiw .gt_font_italic {
+&#10;#ivqoljkdcy .gt_font_italic {
   font-style: italic;
 }
-&#10;#kytyfzjkiw .gt_super {
+&#10;#ivqoljkdcy .gt_super {
   font-size: 65%;
 }
-&#10;#kytyfzjkiw .gt_footnote_marks {
+&#10;#ivqoljkdcy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#kytyfzjkiw .gt_asterisk {
+&#10;#ivqoljkdcy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#kytyfzjkiw .gt_indent_1 {
+&#10;#ivqoljkdcy .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#kytyfzjkiw .gt_indent_2 {
+&#10;#ivqoljkdcy .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#kytyfzjkiw .gt_indent_3 {
+&#10;#ivqoljkdcy .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#kytyfzjkiw .gt_indent_4 {
+&#10;#ivqoljkdcy .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#kytyfzjkiw .gt_indent_5 {
+&#10;#ivqoljkdcy .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#kytyfzjkiw .katex-display {
+&#10;#ivqoljkdcy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#kytyfzjkiw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#ivqoljkdcy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
