@@ -1,0 +1,10 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  getting-your-dataset: getting-your-dataset.html
+  intro-to-rlstats: intro-to-rlstats.html
+last_built: 2026-05-26T23:05Z
+urls:
+  reference: https://adc-405-s26.github.io/rlstats/reference
+  article: https://adc-405-s26.github.io/rlstats/articles

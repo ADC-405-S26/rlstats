@@ -1,0 +1,186 @@
+# Getting Your Own Dataset
+
+Install the package from Github, and load it with the following code
+
+``` r
+
+#install.packages("remotes")
+#install.packages("devtools")
+devtools::install_github("ADC-405-S26/rlstats")
+
+library(rlstats)
+```
+
+The usage of this package depends on having your own personal Rocket
+League gameplay data in the correct format. If you are interested in
+using this package, first check out the [Rocket League Stats
+API](https://www.rocketleague.com/developer/stats-api). You will need to
+follow the instructions provided to begin recording your gameplay data.
+You will also need some sort of script to read in this data, and write
+it to a file for you to work with. Below is an example r script for this
+purpose. If using this, it will need to be running locally, as it will
+not work in an ide like posit cloud. If you choose to write your own
+script, ensure that everything is formatted properly. In particular the
+column names. Take a look at the dataset in this package. All columns
+names of your personal dataset must match exactly the column names in
+this dataset, which in turn matches exactly to the field names in the
+original API. Once you get your own gameplay file, you’re ready to roll!
+Check out the homepage and the introduction vignette to learn more!
+
+``` r
+
+install.packages(jsonlite)
+library(jsonlite)
+
+HOST <- "127.0.0.1"  # or your gaming PC's IP if running remotely
+PORT <- #FILL IN YOUR RELEVANT PORT
+OUTPUT_DIR <- getwd()
+
+cat("Connecting to Rocket League Stats API at", HOST, "port", PORT, "\n")
+
+con <- tryCatch(
+  socketConnection(host = HOST, port = PORT, open = "rb", blocking = TRUE, timeout = 10),
+  error = function(e) {
+    cat("ERROR: Could not connect.\n")
+    cat("  - Make sure Rocket League is running.\n")
+    cat("  - Check DefaultStatsAPI.ini has PacketSendRate > 0.\n")
+    NULL
+  }
+)
+
+if (is.null(con)) stop("Exiting.")
+cat("Connected!\n")
+
+csv_file    <- NULL
+rows_written <- 0
+current_guid <- NULL
+output_path  <- NULL
+buffer       <- ""
+
+parse_messages <- function(buf) {
+  messages <- list()
+  buf <- trimws(buf, which = "left")
+  while (nchar(buf) > 0) {
+    tryCatch({
+      msg <- fromJSON(buf, simplifyVector = FALSE)
+      messages <- c(messages, list(msg))
+      # consume only the first object by re-encoding and removing it
+      consumed <- nchar(toJSON(msg, auto_unbox = TRUE))
+      buf <- trimws(substring(buf, consumed + 1), which = "left")
+    }, error = function(e) {
+      buf <<- ""  # incomplete — wait for more data
+    })
+  }
+  list(messages = messages, remaining = buf)
+}
+
+extract_rows <- function(data, timestamp) {
+  game      <- data$Game
+  match_guid <- if (!is.null(data$MatchGuid)) data$MatchGuid else ""
+  game_time  <- if (!is.null(game$TimeSeconds)) game$TimeSeconds else ""
+  frame      <- if (!is.null(game$Frame)) game$Frame else ""
+
+  rows <- list()
+  for (p in data$Players) {
+    rows <- c(rows, list(data.frame(
+      timestamp    = round(timestamp, 3),
+      game_time    = game_time,
+      frame        = frame,
+      match_guid   = match_guid,
+      player_name  = if (!is.null(p$Name)) p$Name else "",
+      team_num     = if (!is.null(p$TeamNum)) p$TeamNum else "",
+      score        = if (!is.null(p$Score)) p$Score else "",
+      goals        = if (!is.null(p$Goals)) p$Goals else "",
+      assists      = if (!is.null(p$Assists)) p$Assists else "",
+      saves        = if (!is.null(p$Saves)) p$Saves else "",
+      shots        = if (!is.null(p$Shots)) p$Shots else "",
+      touches      = if (!is.null(p$Touches)) p$Touches else "",
+      car_touches  = if (!is.null(p$CarTouches)) p$CarTouches else "",
+      demos        = if (!is.null(p$Demos)) p$Demos else "",
+      boost        = if (!is.null(p$Boost)) p$Boost else "",
+      is_boosting  = if (!is.null(p$bBoosting)) p$bBoosting else "",
+      speed        = if (!is.null(p$Speed)) p$Speed else "",
+      is_supersonic  = if (!is.null(p$bSupersonic)) p$bSupersonic else "",
+      is_on_ground = if (!is.null(p$bOnGround)) p$bOnGround else "",
+      is_on_wall   = if (!is.null(p$bOnWall)) p$bOnWall else "",
+      is_demolished = if (!is.null(p$bDemolished)) p$bDemolished else "",
+      stringsAsFactors = FALSE
+    )))
+  }
+  rows
+}
+
+on.exit({
+  if (!is.null(csv_file)) {
+    close(csv_file)
+    cat("\nFile closed. Rows written:", rows_written, "\n")
+    cat("Saved to:", output_path, "\n")
+  }
+  close(con)
+}, add = TRUE)
+
+while (TRUE) {
+  chunk <- tryCatch(readLines(con, n = 1, warn = FALSE), error = function(e) NULL)
+  if (is.null(chunk) || length(chunk) == 0) {
+    Sys.sleep(0.01)
+    next
+  }
+
+  buffer <- paste0(buffer, chunk)
+  result <- parse_messages(buffer)
+  buffer <- result$remaining
+
+  for (msg in result$messages) {
+    event <- msg$Event
+    data  <- msg$Data
+    if (is.character(data)) {
+      data <- tryCatch(fromJSON(data, simplifyVector = FALSE), error = function(e) list())
+    }
+
+    if (event == "UpdateState") {
+      guid <- if (!is.null(data$MatchGuid)) data$MatchGuid else ""
+
+      if (is.null(current_guid) || guid != current_guid) {
+        if (!is.null(csv_file)) close(csv_file)
+        current_guid <- guid
+        ts           <- format(Sys.time(), "%Y%m%d_%H%M%S")
+        safe_guid    <- substring(guid, 1, 8)
+        output_path  <- file.path(OUTPUT_DIR, paste0("rl_match_", ts, "_", safe_guid, ".csv"))
+        csv_file     <- file(output_path, open = "w")
+        rows_written <- 0
+        cat("Match started (guid:", guid, ")\n")
+        cat("Recording ->", output_path, "\n")
+        header_written <- FALSE
+      }
+
+      rows <- extract_rows(data, as.numeric(Sys.time()))
+      for (row in rows) {
+        write.table(row,
+          file      = csv_file,
+          sep       = ",",
+          col.names = !header_written,
+          row.names = FALSE,
+          append    = TRUE
+        )
+        header_written <- TRUE
+        rows_written   <- rows_written + 1
+      }
+
+      if (rows_written %% 500 == 0) {
+        cat("  t=", rows[[1]]$game_time, "| rows:", rows_written, "\n")
+        flush(csv_file)
+      }
+
+    } else if (event == "MatchEnded") {
+      winner <- if (!is.null(data$WinnerTeamNum)) data$WinnerTeamNum else "?"
+      cat("\nMatchEnded (winner team:", winner, ")\n")
+      cat("Saved", rows_written, "rows ->", output_path, "\n")
+      cat("Done.\n")
+      quit(save = "no")
+
+    } else {
+      cat("[event]", event, "\n")
+    }
+  }
+}
+```
