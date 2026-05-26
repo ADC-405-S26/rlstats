@@ -18,9 +18,6 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of the rlstats is to package is to provide some useful functions for analyzing rocket league gameplay data. A player can use this package to analyze the data from their own games. If you are interested in doing this, first check out the [Rocket League Stats API](https://www.rocketleague.com/developer/stats-api). You will need to follow the instructions provided to begin recording your gameplay data. You will also need some sort of script to read in this data, and write it to a file for you to work with. Take a look at the dataset \textit{TDMZ443games} in this package. All columns names of your personal dataset must match exactly the column names in this dataset, which in turn matches exactly to the field names in the original API. Once you get your own gameplay file, you're ready to roll!
-
-
 ## Installation
 
 You can install the development version of rlstats from
@@ -41,7 +38,6 @@ library(rlstats)
 ```
 
 
-
 #### stats_for_player
 
 This function outputs a table with some basic summary statistics for a specified player
@@ -57,7 +53,6 @@ stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA
 ```
 
 
-
 #### speed_boost_plots
 
 This function returns two plots displaying boost total and speed information for a specified player throughout the course of a specified game
@@ -67,12 +62,10 @@ speed_boost_plots(TDMZ443games, name = 'TDMZ443', game = '8DF7C4C211F1560E0ED84E
 ```
 
 
-
 #### compare_teams
 
 This functions outputs a table with some summary statistics allowing comparison between the performance of both teams in specified match
 
 ```{r}
-#|eval: true
 compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
 ```

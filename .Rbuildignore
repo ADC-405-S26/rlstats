@@ -9,3 +9,8 @@
 ^rlstats.*\.tgz$
 ^README\.Rmd$
 ^rlstats\.Rproj$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^doc$
+^Meta$
