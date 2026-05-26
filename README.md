@@ -7,7 +7,18 @@
 
 <!-- badges: end -->
 
-The goal of rlstats is to …
+The goal of the rlstats is to package is to provide some useful
+functions for analyzing rocket league gameplay data. A player can use
+this package to analyze the data from their own games. If you are
+interested in doing this, first check out the [Rocket League Stats
+API](https://www.rocketleague.com/developer/stats-api). You will need to
+follow the instructions provided to begin recording your gameplay data.
+You will also need some sort of script to read in this data, and write
+it to a file for you to work with. Take a look at the dataset in this
+package. All columns names of your personal dataset must match exactly
+the column names in this dataset, which in turn matches exactly to the
+field names in the original API. Once you get your own gameplay file,
+you’re ready to roll!
 
 ## Installation
 
@@ -15,39 +26,1330 @@ You can install the development version of rlstats from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-pak::pak("ADC-405-S26/rlstats")
+#install.packages("remotes")
+#install.packages("devtools")
+devtools::install_github("ADC-405-S26/rlstats")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+This package contains three main functions. Two for analyzing a specific
+player, and one for comparison between teams in a match. Below you’ll
+see usage of all three.
 
 ``` r
 library(rlstats)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+\####stats_for_player
+
+This function outputs a table with some basic summary statistics for a
+specified player
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+stats_for_player(TDMZ443games, name = "TDMZ443")
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+<div id="xsrrwvasdo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xsrrwvasdo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+&#10;#xsrrwvasdo thead, #xsrrwvasdo tbody, #xsrrwvasdo tfoot, #xsrrwvasdo tr, #xsrrwvasdo td, #xsrrwvasdo th {
+  border-style: none;
+}
+&#10;#xsrrwvasdo p {
+  margin: 0;
+  padding: 0;
+}
+&#10;#xsrrwvasdo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+&#10;#xsrrwvasdo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+&#10;#xsrrwvasdo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+&#10;#xsrrwvasdo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+&#10;#xsrrwvasdo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+&#10;#xsrrwvasdo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+&#10;#xsrrwvasdo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+&#10;#xsrrwvasdo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+&#10;#xsrrwvasdo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+&#10;#xsrrwvasdo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+&#10;#xsrrwvasdo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+&#10;#xsrrwvasdo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+&#10;#xsrrwvasdo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+&#10;#xsrrwvasdo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+&#10;#xsrrwvasdo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#xsrrwvasdo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+&#10;#xsrrwvasdo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+&#10;#xsrrwvasdo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+&#10;#xsrrwvasdo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#xsrrwvasdo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+&#10;#xsrrwvasdo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#xsrrwvasdo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+&#10;#xsrrwvasdo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#xsrrwvasdo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#xsrrwvasdo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#xsrrwvasdo .gt_left {
+  text-align: left;
+}
+&#10;#xsrrwvasdo .gt_center {
+  text-align: center;
+}
+&#10;#xsrrwvasdo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+&#10;#xsrrwvasdo .gt_font_normal {
+  font-weight: normal;
+}
+&#10;#xsrrwvasdo .gt_font_bold {
+  font-weight: bold;
+}
+&#10;#xsrrwvasdo .gt_font_italic {
+  font-style: italic;
+}
+&#10;#xsrrwvasdo .gt_super {
+  font-size: 65%;
+}
+&#10;#xsrrwvasdo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+&#10;#xsrrwvasdo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+&#10;#xsrrwvasdo .gt_indent_1 {
+  text-indent: 5px;
+}
+&#10;#xsrrwvasdo .gt_indent_2 {
+  text-indent: 10px;
+}
+&#10;#xsrrwvasdo .gt_indent_3 {
+  text-indent: 15px;
+}
+&#10;#xsrrwvasdo .gt_indent_4 {
+  text-indent: 20px;
+}
+&#10;#xsrrwvasdo .gt_indent_5 {
+  text-indent: 25px;
+}
+&#10;#xsrrwvasdo .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+&#10;#xsrrwvasdo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Stats for TDMZ443</td>
+    </tr>
+    &#10;    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_of_Ball_Touches">Number_of_Ball_Touches</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Goals">Number_Of_Goals</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Saves">Number_Of_Saves</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average_Speed">Average_Speed</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average_Boost">Average_Boost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Percentage_Of_Time_Supersonic">Percentage_Of_Time_Supersonic</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Number_of_Ball_Touches" class="gt_row gt_right">68</td>
+<td headers="Number_Of_Goals" class="gt_row gt_right">1</td>
+<td headers="Number_Of_Saves" class="gt_row gt_right">4</td>
+<td headers="Average_Speed" class="gt_row gt_right">51.66</td>
+<td headers="Average_Boost" class="gt_row gt_right">54.81</td>
+<td headers="Percentage_Of_Time_Supersonic" class="gt_row gt_right">16.8%</td></tr>
+  </tbody>
+  &#10;</table>
+</div>
 
-You can also embed plots, for example:
+If your dataset contains data from several games, the above function
+call will return aggregated statistics for all those games. If you want
+to specify a particular game, you pass in its match guid.
 
-<img src="man/figures/README-pressure-1.png" alt="" width="100%" />
+``` r
+stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA271D83282')
+```
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<div id="lcngcjemox" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lcngcjemox table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+&#10;#lcngcjemox thead, #lcngcjemox tbody, #lcngcjemox tfoot, #lcngcjemox tr, #lcngcjemox td, #lcngcjemox th {
+  border-style: none;
+}
+&#10;#lcngcjemox p {
+  margin: 0;
+  padding: 0;
+}
+&#10;#lcngcjemox .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+&#10;#lcngcjemox .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+&#10;#lcngcjemox .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+&#10;#lcngcjemox .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+&#10;#lcngcjemox .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+&#10;#lcngcjemox .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+&#10;#lcngcjemox .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+&#10;#lcngcjemox .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+&#10;#lcngcjemox .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+&#10;#lcngcjemox .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+&#10;#lcngcjemox .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+&#10;#lcngcjemox .gt_from_md > :first-child {
+  margin-top: 0;
+}
+&#10;#lcngcjemox .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+&#10;#lcngcjemox .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+&#10;#lcngcjemox .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#lcngcjemox .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+&#10;#lcngcjemox .gt_row_group_first td {
+  border-top-width: 2px;
+}
+&#10;#lcngcjemox .gt_row_group_first th {
+  border-top-width: 2px;
+}
+&#10;#lcngcjemox .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#lcngcjemox .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+&#10;#lcngcjemox .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#lcngcjemox .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+&#10;#lcngcjemox .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#lcngcjemox .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#lcngcjemox .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#lcngcjemox .gt_left {
+  text-align: left;
+}
+&#10;#lcngcjemox .gt_center {
+  text-align: center;
+}
+&#10;#lcngcjemox .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+&#10;#lcngcjemox .gt_font_normal {
+  font-weight: normal;
+}
+&#10;#lcngcjemox .gt_font_bold {
+  font-weight: bold;
+}
+&#10;#lcngcjemox .gt_font_italic {
+  font-style: italic;
+}
+&#10;#lcngcjemox .gt_super {
+  font-size: 65%;
+}
+&#10;#lcngcjemox .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+&#10;#lcngcjemox .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+&#10;#lcngcjemox .gt_indent_1 {
+  text-indent: 5px;
+}
+&#10;#lcngcjemox .gt_indent_2 {
+  text-indent: 10px;
+}
+&#10;#lcngcjemox .gt_indent_3 {
+  text-indent: 15px;
+}
+&#10;#lcngcjemox .gt_indent_4 {
+  text-indent: 20px;
+}
+&#10;#lcngcjemox .gt_indent_5 {
+  text-indent: 25px;
+}
+&#10;#lcngcjemox .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+&#10;#lcngcjemox div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Stats for TDMZ443</td>
+    </tr>
+    &#10;    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_of_Ball_Touches">Number_of_Ball_Touches</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Goals">Number_Of_Goals</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Saves">Number_Of_Saves</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average_Speed">Average_Speed</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average_Boost">Average_Boost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Percentage_Of_Time_Supersonic">Percentage_Of_Time_Supersonic</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Number_of_Ball_Touches" class="gt_row gt_right">45</td>
+<td headers="Number_Of_Goals" class="gt_row gt_right">1</td>
+<td headers="Number_Of_Saves" class="gt_row gt_right">2</td>
+<td headers="Average_Speed" class="gt_row gt_right">52.52</td>
+<td headers="Average_Boost" class="gt_row gt_right">54.62</td>
+<td headers="Percentage_Of_Time_Supersonic" class="gt_row gt_right">17.6%</td></tr>
+  </tbody>
+  &#10;</table>
+</div>
+
+\####speed_boost_plots
+
+This function returns two plots displaying boost total and speed
+information for a specified player throughout the course of a specified
+game
+
+``` r
+speed_boost_plots(TDMZ443games, name = 'TDMZ443', game = '8DF7C4C211F1560E0ED84EA271D83282')
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" alt="" width="100%" />
+
+\####compare_teams
+
+This functions outputs a table with some summary statistics allowing
+comparison between the performance of both teams in specified match
+
+``` r
+compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
+```
+
+<div id="kytyfzjkiw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kytyfzjkiw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+&#10;#kytyfzjkiw thead, #kytyfzjkiw tbody, #kytyfzjkiw tfoot, #kytyfzjkiw tr, #kytyfzjkiw td, #kytyfzjkiw th {
+  border-style: none;
+}
+&#10;#kytyfzjkiw p {
+  margin: 0;
+  padding: 0;
+}
+&#10;#kytyfzjkiw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+&#10;#kytyfzjkiw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+&#10;#kytyfzjkiw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+&#10;#kytyfzjkiw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+&#10;#kytyfzjkiw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+&#10;#kytyfzjkiw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+&#10;#kytyfzjkiw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+&#10;#kytyfzjkiw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+&#10;#kytyfzjkiw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+&#10;#kytyfzjkiw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+&#10;#kytyfzjkiw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+&#10;#kytyfzjkiw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+&#10;#kytyfzjkiw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+&#10;#kytyfzjkiw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+&#10;#kytyfzjkiw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#kytyfzjkiw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+&#10;#kytyfzjkiw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+&#10;#kytyfzjkiw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+&#10;#kytyfzjkiw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#kytyfzjkiw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+&#10;#kytyfzjkiw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#kytyfzjkiw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+&#10;#kytyfzjkiw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#kytyfzjkiw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#kytyfzjkiw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#kytyfzjkiw .gt_left {
+  text-align: left;
+}
+&#10;#kytyfzjkiw .gt_center {
+  text-align: center;
+}
+&#10;#kytyfzjkiw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+&#10;#kytyfzjkiw .gt_font_normal {
+  font-weight: normal;
+}
+&#10;#kytyfzjkiw .gt_font_bold {
+  font-weight: bold;
+}
+&#10;#kytyfzjkiw .gt_font_italic {
+  font-style: italic;
+}
+&#10;#kytyfzjkiw .gt_super {
+  font-size: 65%;
+}
+&#10;#kytyfzjkiw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+&#10;#kytyfzjkiw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+&#10;#kytyfzjkiw .gt_indent_1 {
+  text-indent: 5px;
+}
+&#10;#kytyfzjkiw .gt_indent_2 {
+  text-indent: 10px;
+}
+&#10;#kytyfzjkiw .gt_indent_3 {
+  text-indent: 15px;
+}
+&#10;#kytyfzjkiw .gt_indent_4 {
+  text-indent: 20px;
+}
+&#10;#kytyfzjkiw .gt_indent_5 {
+  text-indent: 25px;
+}
+&#10;#kytyfzjkiw .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+&#10;#kytyfzjkiw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="8" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Stats for teams</td>
+    </tr>
+    &#10;    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="TeamNum">TeamNum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Goals">Number_Of_Goals</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_of_Ball_Touches">Number_of_Ball_Touches</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Shots">Number_Of_Shots</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Saves">Number_Of_Saves</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Assists">Number_Of_Assists</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Car_Touches">Number_Of_Car_Touches</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Number_Of_Demos">Number_Of_Demos</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="TeamNum" class="gt_row gt_right">0</td>
+<td headers="Number_Of_Goals" class="gt_row gt_right">3</td>
+<td headers="Number_of_Ball_Touches" class="gt_row gt_right">124</td>
+<td headers="Number_Of_Shots" class="gt_row gt_right">10</td>
+<td headers="Number_Of_Saves" class="gt_row gt_right">4</td>
+<td headers="Number_Of_Assists" class="gt_row gt_right">3</td>
+<td headers="Number_Of_Car_Touches" class="gt_row gt_right">270</td>
+<td headers="Number_Of_Demos" class="gt_row gt_right">1</td></tr>
+    <tr><td headers="TeamNum" class="gt_row gt_right">1</td>
+<td headers="Number_Of_Goals" class="gt_row gt_right">1</td>
+<td headers="Number_of_Ball_Touches" class="gt_row gt_right">106</td>
+<td headers="Number_Of_Shots" class="gt_row gt_right">6</td>
+<td headers="Number_Of_Saves" class="gt_row gt_right">5</td>
+<td headers="Number_Of_Assists" class="gt_row gt_right">1</td>
+<td headers="Number_Of_Car_Touches" class="gt_row gt_right">298</td>
+<td headers="Number_Of_Demos" class="gt_row gt_right">3</td></tr>
+  </tbody>
+  &#10;</table>
+</div>

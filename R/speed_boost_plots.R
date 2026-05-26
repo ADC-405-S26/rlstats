@@ -20,8 +20,7 @@ speed_boost_plots <- function(df, name, game) {
 
   player_df <- df |>
     filter(.data$Name == name, .data$MatchGuid == game) |>
-    mutate(time_seconds = row_number() / 7,
-           time_bucket = floor(.data$time_seconds / 15) * 15) |>
+    mutate(time_bucket = floor(.data$TimeSeconds / 15) * 15) |>
     group_by(.data$time_bucket) |>
     summarize(avg_speed = mean(.data$Speed, na.rm = TRUE),
               avg_boost = mean(.data$Boost, na.rm = TRUE))

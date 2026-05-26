@@ -18,38 +18,54 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rlstats is to ...
+The goal of the rlstats is to package is to provide some useful functions for analyzing rocket league gameplay data. A player can use this package to analyze the data from their own games. If you are interested in doing this, first check out the [Rocket League Stats API](https://www.rocketleague.com/developer/stats-api). You will need to follow the instructions provided to begin recording your gameplay data. You will also need some sort of script to read in this data, and write it to a file for you to work with. Take a look at the dataset \textit{TDMZ443games} in this package. All columns names of your personal dataset must match exactly the column names in this dataset, which in turn matches exactly to the field names in the original API. Once you get your own gameplay file, you're ready to roll!
+
 
 ## Installation
 
-You can install the development version of rlstats from [GitHub](https://github.com/) with:
+You can install the development version of rlstats from
+[GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-pak::pak("ADC-405-S26/rlstats")
+#install.packages("remotes")
+#install.packages("devtools")
+devtools::install_github("ADC-405-S26/rlstats")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+This package contains three main functions. Two for analyzing a specific player, and one for comparison between teams in a match. Below you'll see usage of all three.
 
 ```{r example}
 library(rlstats)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+####stats_for_player
 
-```{r cars}
-summary(cars)
+This function outputs a table with some basic summary statistics for a specified player
+
+```{r}
+stats_for_player(TDMZ443games, name = "TDMZ443")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+If your dataset contains data from several games, the above function call will return aggregated statistics for all those games. If you want to specify a particular game, you pass in its match guid.
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+stats_for_player(TDMZ443games, name = "TDMZ443", game = '8DF7C4C211F1560E0ED84EA271D83282')
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+####speed_boost_plots
+
+This function returns two plots displaying boost total and speed information for a specified player throughout the course of a specified game
+
+```{r}
+speed_boost_plots(TDMZ443games, name = 'TDMZ443', game = '8DF7C4C211F1560E0ED84EA271D83282')
+```
+
+####compare_teams
+
+This functions outputs a table with some summary statistics allowing comparison between the performance of both teams in specified match
+
+```{r}
+compare_teams(TDMZ443games, '8DF7C4C211F1560E0ED84EA271D83282')
+```
