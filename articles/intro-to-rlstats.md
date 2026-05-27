@@ -9,7 +9,8 @@ to get a more in depth look in to some aspects of a player’s gameplay
 which may be hard to keep track of manually. Especially things like
 average speed and boost habits. The usage of this package for this
 purpose requires a player personal gameplay data. If you’re interested
-in using this package, first check out the “Getting your dataset”
+in using this package, first check out the [Getting your
+dataset](https://adc-405-s26.github.io/rlstats/articles/getting-your-dataset.html)
 vignette for instructions on getting your own data.
 
 To install this package through Github, use
@@ -37,11 +38,13 @@ This package currently contains three functions
 - `compare_teams` - give summary statistics comparing each team in a
   specific game
 
-\#Caution All these functions can take a argument, and the first two
-listed above take a argument. Unfortunately with the current setup, if
-you want to look at a specific player or game, you have to know exactly
-the player name and match guid. For most this won’t be an issue with the
-player name, but to know the match guid you must actually look at your
-dataset itself, and manually find the match guid. So if you really want
-to look back on a specific match, one must note its match guid as soon
-as the data is recorded. A cleaner system for this will be coming soon.
+## Caution
+
+All these functions can take a argument, and the first two listed above
+take a argument. Unfortunately with the current setup, if you want to
+look at a specific player or game, you have to know exactly the player
+name and match guid. For most this won’t be an issue with the player
+name, but to know the match guid you must actually look at your dataset
+itself, and manually find the match guid. So if you really want to look
+back on a specific match, one must note its match guid as soon as the
+data is recorded. A cleaner system for this will be coming soon.

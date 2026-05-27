@@ -12,6 +12,10 @@ You can install the development version of rlstats from
 devtools::install_github("ADC-405-S26/rlstats")
 ```
 
+**Note: If you’re reading this on the Github source code page, there
+will be a lot of css jargon that it displays. Scroll past to see the
+table output.**
+
 ## Examples
 
 This package contains three main functions. Two for analyzing a specific

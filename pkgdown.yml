@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   getting-your-dataset: getting-your-dataset.html
   intro-to-rlstats: intro-to-rlstats.html
-last_built: 2026-05-26T23:05Z
+last_built: 2026-05-27T00:18Z
 urls:
   reference: https://adc-405-s26.github.io/rlstats/reference
   article: https://adc-405-s26.github.io/rlstats/articles

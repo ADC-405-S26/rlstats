@@ -73,8 +73,8 @@ or coach to get a more in depth look in to some aspects of a player’s
 gameplay which may be hard to keep track of manually. Especially things
 like average speed and boost habits. The usage of this package for this
 purpose requires a player personal gameplay data. If you’re interested
-in using this package, first check out the “Getting your dataset”
-vignette for instructions on getting your own data.</p>
+in using this package, first check out the <a href="https://adc-405-s26.github.io/rlstats/articles/getting-your-dataset.html">Getting
+your dataset</a> vignette for instructions on getting your own data.</p>
 <p>To install this package through Github, use</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("remotes")</span></span>
@@ -82,7 +82,7 @@ vignette for instructions on getting your own data.</p>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ADC-405-S26/rlstats"</span><span class="op">)</span></span></code></pre></div>
 <p>Then load it with the following code -</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlstats</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adc-405-s26.github.io/rlstats/">rlstats</a></span><span class="op">)</span></span></code></pre></div>
 <p>This package currently contains three functions</p>
 <ul>
 <li>
@@ -95,15 +95,19 @@ a specific player in a specific ga,e</li>
 <code>compare_teams</code> - give summary statistics comparing each
 team in a specific game</li>
 </ul>
-<p>#Caution All these functions can take a argument, and the first two
-listed above take a argument. Unfortunately with the current setup, if
-you want to look at a specific player or game, you have to know exactly
-the player name and match guid. For most this won’t be an issue with the
+<div class="section level2">
+<h2 id="caution">Caution<a class="anchor" aria-label="anchor" href="#caution"></a>
+</h2>
+<p>All these functions can take a argument, and the first two listed
+above take a argument. Unfortunately with the current setup, if you want
+to look at a specific player or game, you have to know exactly the
+player name and match guid. For most this won’t be an issue with the
 player name, but to know the match guid you must actually look at your
 dataset itself, and manually find the match guid. So if you really want
 to look back on a specific match, one must note its match guid as soon
 as the data is recorded. A cleaner system for this will be coming
 soon.</p>
+</div>
   </main>
 </div>
 

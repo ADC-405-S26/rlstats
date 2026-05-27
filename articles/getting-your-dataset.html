@@ -71,7 +71,7 @@ code</p>
 <span><span class="co">#install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ADC-405-S26/rlstats"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlstats</span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adc-405-s26.github.io/rlstats/">rlstats</a></span><span class="op">)</span></span></code></pre></div>
 <p>The usage of this package depends on having your own personal Rocket
 League gameplay data in the correct format. If you are interested in
 using this package, first check out the <a href="https://www.rocketleague.com/developer/stats-api" class="external-link">Rocket League
@@ -82,11 +82,13 @@ with. Below is an example r script for this purpose. If using this, it
 will need to be running locally, as it will not work in an ide like
 posit cloud. If you choose to write your own script, ensure that
 everything is formatted properly. In particular the column names. Take a
-look at the dataset in this package. All columns names of your personal
-dataset must match exactly the column names in this dataset, which in
-turn matches exactly to the field names in the original API. Once you
-get your own gameplay file, you’re ready to roll! Check out the homepage
-and the introduction vignette to learn more!</p>
+look at the dataset <a href="https://adc-405-s26.github.io/rlstats/reference/TDMZ443games.html">TDMZ443games</a>
+in this package. All columns names of your personal dataset must match
+exactly the column names in this dataset, which in turn matches exactly
+to the field names in the original API. Once you get your own gameplay
+file, you’re ready to roll! Check out the <a href="https://adc-405-s26.github.io/rlstats/index.html">homepage</a> and
+the <a href="https://adc-405-s26.github.io/rlstats/articles/intro-to-rlstats.html">introduction
+vignette</a> to learn more!</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="va">jsonlite</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jeroen.r-universe.dev/jsonlite" class="external-link">jsonlite</a></span><span class="op">)</span></span>

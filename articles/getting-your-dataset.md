@@ -21,11 +21,16 @@ it to a file for you to work with. Below is an example r script for this
 purpose. If using this, it will need to be running locally, as it will
 not work in an ide like posit cloud. If you choose to write your own
 script, ensure that everything is formatted properly. In particular the
-column names. Take a look at the dataset in this package. All columns
-names of your personal dataset must match exactly the column names in
-this dataset, which in turn matches exactly to the field names in the
-original API. Once you get your own gameplay file, you’re ready to roll!
-Check out the homepage and the introduction vignette to learn more!
+column names. Take a look at the dataset
+[TDMZ443games](https://adc-405-s26.github.io/rlstats/reference/TDMZ443games.html)
+in this package. All columns names of your personal dataset must match
+exactly the column names in this dataset, which in turn matches exactly
+to the field names in the original API. Once you get your own gameplay
+file, you’re ready to roll! Check out the
+[homepage](https://adc-405-s26.github.io/rlstats/index.html) and the
+[introduction
+vignette](https://adc-405-s26.github.io/rlstats/articles/intro-to-rlstats.html)
+to learn more!
 
 ``` r
 
