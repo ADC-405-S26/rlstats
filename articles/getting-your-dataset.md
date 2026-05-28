@@ -18,15 +18,17 @@ API](https://www.rocketleague.com/developer/stats-api). You will need to
 follow the instructions provided to begin recording your gameplay data.
 You will also need some sort of script to read in this data, and write
 it to a file for you to work with. Below is an example r script for this
-purpose. If using this, it will need to be running locally, as it will
-not work in an ide like posit cloud. If you choose to write your own
-script, ensure that everything is formatted properly. In particular the
-column names. Take a look at the dataset
+purpose. If using this script, it will need to be running locally. It
+will not work in an ide like Posit Cloud. You will also need to fill in
+your relevant port information towards the top. If you choose to write
+your own script, ensure that everything is formatted properly. The most
+important thing is that the column names are correct. Take a look at the
+dataset
 [TDMZ443games](https://adc-405-s26.github.io/rlstats/reference/TDMZ443games.html)
 in this package. All columns names of your personal dataset must match
-exactly the column names in this dataset, which in turn matches exactly
-to the field names in the original API. Once you get your own gameplay
-file, you’re ready to roll! Check out the
+exactly the column names in this dataset. These match exactly to the
+field names in the original API. Once you get your own gameplay file,
+you’re ready to roll! Check out the
 [homepage](https://adc-405-s26.github.io/rlstats/index.html) and the
 [introduction
 vignette](https://adc-405-s26.github.io/rlstats/articles/intro-to-rlstats.html)

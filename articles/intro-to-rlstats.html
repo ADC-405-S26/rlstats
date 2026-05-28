@@ -65,16 +65,17 @@
     
     
 <p>The goal of the <code>rlstats</code> is to package is to provide some
-useful functions for analyzing rocket league gameplay data. A lot of
+useful functions for analyzing Rocket League gameplay data. A lot of
 people take Rocket League very seriously from a competitive point of
 view. Several people seek out and pay for coaching to analyze their
 gameplay in an attempt to improve. This package may be used by a player
 or coach to get a more in depth look in to some aspects of a player’s
-gameplay which may be hard to keep track of manually. Especially things
-like average speed and boost habits. The usage of this package for this
-purpose requires a player personal gameplay data. If you’re interested
-in using this package, first check out the <a href="https://adc-405-s26.github.io/rlstats/articles/getting-your-dataset.html">Getting
-your dataset</a> vignette for instructions on getting your own data.</p>
+gameplay that are hard to track manually. Especially things like average
+speed and boost habits. The usage of this package for this purpose
+requires a player’s personal gameplay data. If you’re interested in
+using this package, first check out the <a href="https://adc-405-s26.github.io/rlstats/articles/getting-your-dataset.html">Getting
+Your Own Dataset</a> vignette for instructions on getting your own
+data.</p>
 <p>To install this package through Github, use</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("remotes")</span></span>
@@ -89,8 +90,8 @@ your dataset</a> vignette for instructions on getting your own data.</p>
 <code>stats_for_player</code> - gives some basic summary statistics
 for a specific player</li>
 <li>
-<code>speed_boost_plots</code> - give boost and speed line plots for
-a specific player in a specific ga,e</li>
+<code>speed_boost_plots</code> - gives boost and speed line plots
+for a specific player in a specific game</li>
 <li>
 <code>compare_teams</code> - give summary statistics comparing each
 team in a specific game</li>
@@ -98,15 +99,17 @@ team in a specific game</li>
 <div class="section level2">
 <h2 id="caution">Caution<a class="anchor" aria-label="anchor" href="#caution"></a>
 </h2>
-<p>All these functions can take a argument, and the first two listed
-above take a argument. Unfortunately with the current setup, if you want
-to look at a specific player or game, you have to know exactly the
-player name and match guid. For most this won’t be an issue with the
-player name, but to know the match guid you must actually look at your
-dataset itself, and manually find the match guid. So if you really want
-to look back on a specific match, one must note its match guid as soon
-as the data is recorded. A cleaner system for this will be coming
-soon.</p>
+<p>All these functions can take a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="italic">𝑔𝑎𝑚𝑒</mtext><annotation encoding="application/x-tex">\textit{game}</annotation></semantics></math>
+argument, and the first two listed above take a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="italic">𝑛𝑎𝑚𝑒</mtext><annotation encoding="application/x-tex">\textit{name}</annotation></semantics></math>
+argument. With the current setup, if you want to look at a specific
+player or game, you have to know exactly the player name and match guid.
+For most this won’t be an issue with the player name. But to know the
+match guid you must look at your dataset itself, and manually find the
+match guid. So, if you want to look back at a specific match you must
+note its match guid as soon as the data is recorded. A cleaner system
+for this will be coming soon.</p>
 </div>
   </main>
 </div>
