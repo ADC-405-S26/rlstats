@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 
 # rlstats
 
-
 <!-- badges: start -->
 <!-- badges: end -->
 
