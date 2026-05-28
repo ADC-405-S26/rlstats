@@ -28,3 +28,9 @@ test_that("compare_teams assertions catch invalid inputs on game", {
   #game is missing
   expect_error(compare_teams(TDMZ443games, NA_character_), "Assertion on 'game' failed")
 })
+
+test_that("compare_teams assertions catches game entries that do not exist", {
+  #game is not in the dataset
+  expect_error(stats_for_player(TDMZ443games, name = "TDMZ443", game = "8DF7C4C211F60E0ED84EA271D83282"), "Assertion on 'game' failed")
+
+})

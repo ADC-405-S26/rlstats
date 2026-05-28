@@ -16,6 +16,7 @@ compare_teams <- function(df,game)
   checkmate::assert_data_frame(df)
   checkmate::assert_string(game)
 
+  checkmate::assert_choice(game, choices = df$MatchGuid)
 
   df |>
     filter(.data$MatchGuid == game) |>

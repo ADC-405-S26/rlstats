@@ -20,6 +20,12 @@ stats_for_player <- function(df,name,game = NULL)
   checkmate::assert_string(name)
   checkmate::assert_string(game, null.ok = TRUE)
 
+  checkmate::assert_choice(name, choices = df$Name)
+  if(!is.null(game)){
+  checkmate::assert_choice(game, choices = df$MatchGuid)
+  }
+
+
   s <- if(is.null(game)){
     df |>  filter(.data$Name == name)
   } else{

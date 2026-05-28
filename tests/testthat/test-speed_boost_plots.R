@@ -1,6 +1,6 @@
 test_that("speed_boost_plots returns a patchwork object", {
   #call function on valid input
-  result <- speed_boost_plots(TDMZ443games, name = "TDMZ223", game = "D96D303C11F15617E1F59A8137901B26")
+  result <- speed_boost_plots(TDMZ443games, name = "TDMZ443", game = "D96D303C11F15617E1F59A8137901B26")
 
   #check if output is patchwork object
   expect_s3_class(result, "patchwork")
@@ -9,7 +9,7 @@ test_that("speed_boost_plots returns a patchwork object", {
 
 test_that("speed_boost_plots contains two plots", {
   #call function on valid input
-  result <- speed_boost_plots(TDMZ443games, name = "TDMZ223", game = "D96D303C11F15617E1F59A8137901B26")
+  result <- speed_boost_plots(TDMZ443games, name = "TDMZ443", game = "D96D303C11F15617E1F59A8137901B26")
 
   #check if two plots are present
   expect_equal(length(result$patches$plots) + 1, 2)
@@ -50,3 +50,11 @@ test_that("speed_boost_plots assertions catch invalid inputs on game", {
 
 })
 
+test_that("speed_boost_plots assertions catches name and game entries that do not exist", {
+  #game is not in the dataset
+  expect_error(speed_boost_plots(TDMZ443games, name = "TDMZ443", game = "8DF7C4C211F60E0ED84EA271D83282"), "Assertion on 'game' failed")
+
+  #name is not in the dataset
+  expect_error(speed_boost_plots(TDMZ443games, name = 'TDMZ453', game = "8DF7C4C211F1560E0ED84EA271D83282"), "Assertion on 'name' failed")
+
+})

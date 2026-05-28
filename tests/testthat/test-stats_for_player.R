@@ -62,3 +62,12 @@ test_that("stats_for_player assertions catch invalid inputs on game", {
   expect_error(stats_for_player(TDMZ443games, name = 'TDMZ443', game = c("what","a","save")), "Assertion on 'game' failed")
 
 })
+
+test_that("stats_for_player assertions catches name and game entries that do not exist", {
+  #game is not in the dataset
+  expect_error(stats_for_player(TDMZ443games, name = "TDMZ443", game = "8DF7C4C211F60E0ED84EA271D83282"), "Assertion on 'game' failed")
+
+  #name is not in the dataset
+  expect_error(stats_for_player(TDMZ443games, name = 'TDMZ453', game = "8DF7C4C211F1560E0ED84EA271D83282"), "Assertion on 'name' failed")
+
+})

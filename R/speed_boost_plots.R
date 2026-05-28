@@ -18,6 +18,10 @@ speed_boost_plots <- function(df, name, game) {
   checkmate::assert_string(name)
   checkmate::assert_string(game)
 
+  checkmate::assert_choice(name, choices = df$Name)
+  checkmate::assert_choice(game, choices = df$MatchGuid)
+
+
   player_df <- df |>
     filter(.data$Name == name, .data$MatchGuid == game) |>
     mutate(time_bucket = floor(.data$TimeSeconds / 15) * 15) |>
